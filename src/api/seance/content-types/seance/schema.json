@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seances",
+  "info": {
+    "singularName": "seance",
+    "pluralName": "seances",
+    "displayName": "seance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "scenario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::scenario.scenario",
+      "inversedBy": "seances"
+    },
+    "room": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::room.room",
+      "inversedBy": "seances"
+    },
+    "date": {
+      "type": "date"
+    },
+    "hour": {
+      "type": "time"
+    },
+    "nbPlayers": {
+      "type": "integer"
+    }
+  }
+}
